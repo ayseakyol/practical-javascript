@@ -20,22 +20,20 @@ var todoList = {
     var totalTodos = this.todos.length;
     var completedTodos = 0;
     // Get number of completed todos
-    for (var i = 0; i < totalTodos; i++) {
-      if (this.todos[i].completed === true) {
+    this.todos.forEach(function(todo) {
+      if (todo.completed === true) {
         completedTodos++;
       }
-    }
-    // Case 1:if everything is true, make everything false
-    if (completedTodos === totalTodos) {
-      for (var i = 0; i < totalTodos; i++) {
-        this.todos[i].completed = false;
+    });
+    this.todos.forEach(function(todo) {
+      // Case1 : If everything is true, make everything false
+      if (completedTodos === totalTodos) {
+        todo.completed = false;
+        // Case2 : Otherwise, make everything true
+      } else {
+        todo.completed = true;
       }
-      // Case 1:Otherwise, make everything true
-    } else {
-      for (var i = 0; i < totalTodos; i++) {
-        this.todos[i].completed = true;
-      }
-    }
+    });
   }
 };
 var handler = {
@@ -78,25 +76,23 @@ var handler = {
 //new code from version 9 videos..
 var view = {
   displayTodos: function() {
-    var todosUl = document.querySelector("ul");
+    let todosUl = document.querySelector("ul");
     todosUl.innerHTML = "";
 
-    for (var i = 0; i < todoList.todos.length; i++) {
-      var todoLi = document.createElement("li");
-      var todo = todoList.todos[i];
-      var todoTextWithCompletion = "";
+    todoList.todos.forEach(function(todo, position) {
+      let todoLi = document.createElement("li");
+      let todoTextWithCompletion = "";
 
       if (todo.completed === true) {
         todoTextWithCompletion = "(X) " + todo.todoText;
       } else {
         todoTextWithCompletion = "( ) " + todo.todoText;
       }
-
-      todoLi.id = i;
+      todoLi.id = position;
       todoLi.textContent = todoTextWithCompletion;
       todoLi.appendChild(this.createDeleteButton());
       todosUl.appendChild(todoLi);
-    }
+    }, this); // this refers to view object ==> forEach(callbak, this)
   },
   createDeleteButton: function() {
     var deleteButton = document.createElement("button");
