@@ -1,0 +1,38 @@
+body {
+  background-color: rgb(241, 236, 229);
+  font-family: "Roboto", sans-serif;
+}
+
+button {
+  padding: 8px 20px;
+  margin: 10px;
+  font-size: 14px;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  color: #240f04;
+  background-color: #61dfe4;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 7px #999;
+}
+
+button:hover {
+  background-color: #11a8a8;
+}
+
+button:active {
+  background-color: #46c2d8;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+input {
+  padding: 7px 30px;
+}
+
+h1 {
+  background-color: rgb(100, 196, 196);
+  color: rgb(48, 30, 6);
+  padding: 20px 60px;
+}
