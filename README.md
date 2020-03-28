@@ -17,7 +17,7 @@ Studying this project I learned about:
 - Changing functions to methods in the objects.
 - Using `this`.
 
-We struggled with:
+I struggled with:
 
 - I have a little difficulty while seperating files.
 
