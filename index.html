@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Todo List</title>
+    <link rel="stylesheet" type="text/css" href="./todo/style.css" />
+    <script src="./todo/handler.js"></script>
+    <script src="./todo/log.js"></script>
+  </head>
+
+  <body>
+    <h1>Todo List</h1>
+
+    <div>
+      <button id="toggleAllButton">Toggle All</button>
+    </div>
+    <div>
+      <button id="addButton">Add</button>
+      <input id="addTodoTextInput" type="text" />
+    </div>
+
+    <div>
+      <button id="changeButton">Change</button>
+      <input id="changeTodoPositionInput" type="number" />
+      <input id="changeTodoTextInput" type="text" />
+    </div>
+
+    <div>
+      <button id="toggleCompletedButton">Toggle Completed</button>
+      <input id="toggleCompletedPositionInput" type="number" />
+    </div>
+
+    <ul></ul>
+    <script src="./todo/dom.js"></script>
+    <script src="./todo/listener.js"></script>
+  </body>
+</html>

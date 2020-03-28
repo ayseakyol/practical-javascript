@@ -1,6 +1,4 @@
-version 4 change array to the object 
-!true = false
-# Drum Kit: Development Strategy
+# Practical - Javascript: Development Strategy
 
 Building this site with watching `watch and code` videos. Firstly written 7 versions in different files. Version 8-9-10-11 written in one html and js file with making changes 0n them. As a final project Iprepared `todo` folder with seperating handler, listenr and 
 
