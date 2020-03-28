@@ -21,7 +21,6 @@ We struggled with:
 
 - I have a little difficulty while seperating files.
 
-These resources were very helpful:
 
 ---
 
